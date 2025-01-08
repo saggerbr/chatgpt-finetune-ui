@@ -52,7 +52,7 @@ if api_key.startswith('sk-'):
             response_display.write(deleted_file)
 
         if st.button("Create Fine-Tuning Job") and file_id:
-            job = openai.FineTuningJob.create(training_file=file_id, model='gpt-3.5-turbo', hyperparameters={"n_epochs":n_epochs, })
+            job = openai.FineTuningJob.create(training_file=file_id, model='gpt-4o-mini', hyperparameters={"n_epochs":n_epochs, })
             response_display.write(job)
 
         if st.button("Get Fine-Tuning Job Detail") and job_id:
